@@ -31,7 +31,7 @@ SHOP_NAME = os.getenv("SHOP_NAME", "Sm Hosting")
 SUPPORT_USERNAME = os.getenv("SUPPORT_USERNAME", "Mormonsq").lstrip("@")
 BANNER = os.getenv("BANNER", "banner.jpg")          # путь к файлу или URL картинки
 CURRENCY = os.getenv("CURRENCY", "$")
-MIN_TOPUP = float(os.getenv("MIN_TOPUP", "50"))
+MIN_TOPUP = float(os.getenv("MIN_TOPUP", "1"))
 LOW_STOCK = int(os.getenv("LOW_STOCK", "3"))         # уведомление админам при малом остатке
 DB_PATH = os.getenv("DB_PATH", "shop.db")
 
