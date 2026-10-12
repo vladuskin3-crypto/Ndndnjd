@@ -25,20 +25,20 @@ except ImportError:
     pass
 
 # ───────────────────────── НАСТРОЙКИ (.env) ─────────────────────────
-TOKEN = os.getenv("BOT_TOKEN", "")
+TOKEN = os.getenv("BOT_TOKEN", "8851216228:AAF-xVEBNbvjKbtAybAir-aFPTvJtxoqaVA")
 ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "8759747461").replace(" ", "").split(",") if x.isdigit()]
-SHOP_NAME = os.getenv("SHOP_NAME", "My Shop")
+SHOP_NAME = os.getenv("SHOP_NAME", "Sm Hosting")
 SUPPORT_USERNAME = os.getenv("SUPPORT_USERNAME", "Mormonsq").lstrip("@")
 BANNER = os.getenv("BANNER", "banner.jpg")          # путь к файлу или URL картинки
-CURRENCY = os.getenv("CURRENCY", "₽")
+CURRENCY = os.getenv("CURRENCY", "$")
 MIN_TOPUP = float(os.getenv("MIN_TOPUP", "50"))
 LOW_STOCK = int(os.getenv("LOW_STOCK", "3"))         # уведомление админам при малом остатке
 DB_PATH = os.getenv("DB_PATH", "shop.db")
 
 # CryptoBot (Crypto Pay API): токен берётся в @CryptoBot → Crypto Pay → Create App
-CRYPTO_TOKEN = os.getenv("CRYPTO_TOKEN", "").strip()
+CRYPTO_TOKEN = os.getenv("CRYPTO_TOKEN", "http://t.me/send?start=IVXbX0mcEeBt").strip()
 CRYPTO_TESTNET = os.getenv("CRYPTO_TESTNET", "0") == "1"          # 1 = тестовая сеть (@CryptoTestnetBot)
-CRYPTO_FIAT = os.getenv("CRYPTO_FIAT", "RUB").upper()             # валюта счёта, должна совпадать с валютой магазина
+CRYPTO_FIAT = os.getenv("CRYPTO_FIAT", "Dollars").upper()             # валюта счёта, должна совпадать с валютой магазина
 CRYPTO_ASSETS = os.getenv("CRYPTO_ASSETS", "USDT,TON,BTC,ETH,LTC,TRX,USDC").replace(" ", "")  # пусто = любые
 CRYPTO_TTL_MIN = int(os.getenv("CRYPTO_TTL_MIN", "60"))           # срок жизни счёта, минут
 CRYPTO_POLL = int(os.getenv("CRYPTO_POLL", "10"))                 # как часто проверять оплату, секунд
